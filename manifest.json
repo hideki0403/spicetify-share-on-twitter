@@ -1,0 +1,13 @@
+{
+    "name": "Share on Twitter",
+    "description": "A Spicetify extension to add a button to share music on Twitter.",
+    "preview": "assets/thumbnail.png",
+    "main": "dist/share-on-twitter.js",
+    "readme": "README.md",
+    "authors": [
+        {
+            "name": "yukineko",
+            "url": "https://github.com/hideki0403"
+        }
+    ]
+}

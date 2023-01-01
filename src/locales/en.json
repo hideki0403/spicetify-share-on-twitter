@@ -1,0 +1,13 @@
+{
+    "app.share-on-twitter": "Share on Twitter",
+    "app.unknown": "Unknown",
+    "app.podcast": "Podcast",
+    "app.episode": "episode",
+    "app.playlist": "Playlist",
+    "message.not-playing": "Music is not currently playing",
+    "message.non-supported-type": "Non-supported type",
+    "message.settings-notification": "This setting will take effect after reboot",
+    "settings.title": "Share on Twitter settings",
+    "settings.tweet-button": "Show Tweet button in the control panel",
+    "settings.share-button": "Show share button in the context menu"
+}

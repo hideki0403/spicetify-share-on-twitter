@@ -1,0 +1,13 @@
+{
+    "app.share-on-twitter": "Twitterでシェア",
+    "app.unknown": "不明",
+    "app.podcast": "ポッドキャスト",
+    "app.episode": "エピソード",
+    "app.playlist": "プレイリスト",
+    "message.not-playing": "音楽は現在再生されていません",
+    "message.non-supported-type": "このタイプのシェアには対応していません",
+    "message.settings-notification": "この設定は再起動後に有効になります",
+    "settings.title": "「Twitterでシェア」に関する設定",
+    "settings.tweet-button": "コントロールパネルにツイートボタンを表示する",
+    "settings.share-button": "コンテキストメニューに「Twitterでシェア」を表示する"
+}

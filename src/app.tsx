@@ -36,7 +36,7 @@ export default async function() {
         </button>`
 
         button.addEventListener('click', () => {
-            const current = Spicetify.Player.data.track
+            const current = Spicetify.Player.data?.track
             if (!current) {
                 return Spicetify.showNotification(i18n.loc('message.not-playing'))
             }

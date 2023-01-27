@@ -113,7 +113,7 @@ const fetch = {
         const res = await Spicetify.CosmosAsync.get(`https://api.spotify.com/v1/tracks/${base62}`)
         return {
             title: res.name,
-            artist: res.artists[0].name
+            artist: res.artists.map((artist: { [key: string]: string }) => artist.name).join(', ')
         }
     },
     album: async (base62: string) => {

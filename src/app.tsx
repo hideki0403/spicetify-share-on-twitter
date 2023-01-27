@@ -12,14 +12,17 @@ type MetadataWithUri = Metadata & {
     uri: string
 }
 
+var settings: SettingsSection
+
 export default async function() {
     while (!Spicetify) {
         await new Promise(resolve => setTimeout(resolve, 100))
     }
 
-    const settings = new SettingsSection(i18n.loc('settings.title'), 'share-on-twitter')
+    settings = new SettingsSection(i18n.loc('settings.title'), 'share-on-twitter')
     settings.addToggle('enable-tweet-button', i18n.loc('settings.tweet-button'), true, restartNotification)
     settings.addToggle('enable-context-menu', i18n.loc('settings.share-button'), true, restartNotification)
+    settings.addToggle('enable-hashtag', i18n.loc('settings.add-hashtag'), true)
     await settings.pushSettings()
 
     if (settings.getFieldValue('enable-context-menu')) new Spicetify.ContextMenu.Item(i18n.loc('app.share-on-twitter'), share, void (0), 'twitter').register()
@@ -99,7 +102,10 @@ function tweet(meta: MetadataWithUri) {
     var parsedURI = meta.uri.split(':')
     var tweetText = `${meta.title || i18n.loc('app.unknown')}${meta.artist ? ` - ${meta.artist}`: ''}\nhttps://open.spotify.com/${parsedURI[1]}/${parsedURI[2]}`
 
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&hashtags=Spotify`.replace('\n', '%0D%0A'))
+    var contents = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`
+    if (settings.getFieldValue('enable-hashtag')) contents += '&hashtags=Spotify'
+
+    window.open(contents.replace('\n', '%0D%0A'))
 }
 
 const fetch = {

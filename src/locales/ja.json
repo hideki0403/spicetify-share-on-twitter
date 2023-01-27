@@ -9,5 +9,6 @@
     "message.settings-notification": "この設定は再起動後に有効になります",
     "settings.title": "「Twitterでシェア」に関する設定",
     "settings.tweet-button": "コントロールパネルにツイートボタンを表示する",
-    "settings.share-button": "コンテキストメニューに「Twitterでシェア」を表示する"
+    "settings.share-button": "コンテキストメニューに「Twitterでシェア」を表示する",
+    "settings.add-hashtag": "ツイートにハッシュタグ「#spotify」を付ける"
 }

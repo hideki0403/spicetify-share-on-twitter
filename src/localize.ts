@@ -18,7 +18,7 @@ export default class Localize {
         if (text) return text
 
         // fallback
-        return this.availableLangs['en'][target] || 'Failed to get localized text'
+        return this.availableLangs['en'][target] || `Failed to get localized text (${target})`
     }
 }
 
